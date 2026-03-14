@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Games — Grave Lantern Studio</title>
+  <meta name="description" content="Explore the games crafted by Grave Lantern Studio.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <span class="lantern-icon">🕯️</span>
+      Grave Lantern Studio
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="games.html">Games</a></li>
+      <li><a href="devlog.html">Devlog</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <div class="page-header-inner">
+      <div class="section-label">Our Catalogue</div>
+      <h1 class="page-header-title">Games</h1>
+    </div>
+  </div>
+
+  <!-- FEATURED GAME -->
+  <section style="background: var(--bg-surface); padding: 5rem 2rem;">
+    <div class="section-inner">
+      <div class="section-label reveal">Featured</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; margin-top:2rem;">
+        <div class="about-image-wrapper reveal">
+          <div style="width:100%; height:400px; background:linear-gradient(135deg,#1a0a2e 0%,#0a1628 50%,#004d2a 100%); display:flex; align-items:center; justify-content:center; font-size:8rem; position:relative;">
+            🕯️
+            <div style="position:absolute; inset:0; background:radial-gradient(circle at 50% 50%, rgba(0,255,136,0.1) 0%, transparent 70%); animation: pulse-glow 3s infinite;"></div>
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="section-label">Currently In Development</div>
+          <h2 class="section-title">Project Lantern</h2>
+          <p style="color:var(--text-mid); margin-bottom:1.5rem; font-size:1.1rem;">
+            An atmospheric exploration game set in a world consumed by eternal night. 
+            Armed only with a lantern, players navigate a haunting landscape filled with 
+            secrets, shadows, and stories waiting to be uncovered.
+          </p>
+          <p style="color:var(--text-dim); margin-bottom:2rem; font-style:italic;">
+            "In the dark, every shadow tells a story."
+          </p>
+          <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:2rem;">
+            <span class="game-status dev">In Development</span>
+            <span class="tag">Atmospheric</span>
+            <span class="tag">Exploration</span>
+            <span class="tag">Story-Rich</span>
+            <span class="tag">Dark</span>
+          </div>
+          <a href="devlog.html" class="btn-primary">Follow Development</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- GAME DETAILS -->
+  <section style="background: var(--bg-deep); padding: 5rem 2rem;">
+    <div class="section-inner">
+      <div class="section-label reveal">Features</div>
+      <h2 class="section-title reveal">What to Expect</h2>
+
+      <div class="values-grid reveal">
+        <div class="value-card">
+          <div class="value-icon">🌑</div>
+          <h3 class="value-title">Deep Atmosphere</h3>
+          <p class="value-desc">Every environment tells a story. Every shadow hides a secret. Atmosphere is not a feature — it's the foundation.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">📖</div>
+          <h3 class="value-title">Environmental Storytelling</h3>
+          <p class="value-desc">No cutscenes. No exposition dumps. The world itself tells the story — if you know how to listen.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">🔍</div>
+          <h3 class="value-title">Exploration Driven</h3>
+          <p class="value-desc">Curiosity is rewarded. Every corner explored, every door opened reveals something new.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">🎵</div>
+          <h3 class="value-title">Original Soundtrack</h3>
+          <p class="value-desc">A haunting, original score that breathes life into every moment and amplifies every emotion.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- MORE GAMES -->
+  <section style="padding: 5rem 2rem;">
+    <div class="section-inner">
+      <div class="section-label reveal">On the Horizon</div>
+      <h2 class="section-title reveal">Future Projects</h2>
+      <p class="section-desc reveal">The lantern burns bright with ideas. These worlds are waiting to be built.</p>
+
+      <div class="games-grid">
+        <div class="game-card reveal">
+          <div class="game-card-glow"></div>
+          <div class="game-card-placeholder">🌑</div>
+          <div class="game-card-body">
+            <p class="game-card-tag">Concept Phase</p>
+            <h3 class="game-card-title">Untitled Project II</h3>
+            <p class="game-card-desc">
+              Something is brewing in the studio. A new world taking shape in the shadows. 
+              Details will emerge when the time is right.
+            </p>
+          </div>
+          <div class="game-card-footer">
+            <span class="game-status coming-soon">Coming Eventually</span>
+          </div>
+        </div>
+
+        <div class="game-card reveal">
+          <div class="game-card-glow"></div>
+          <div class="game-card-placeholder">💀</div>
+          <div class="game-card-body">
+            <p class="game-card-tag">A Dream</p>
+            <h3 class="game-card-title">The Long Game</h3>
+            <p class="game-card-desc">
+              Every studio has that one ambitious dream project. Ours lives in a notebook, 
+              growing with every passing year. One day.
+            </p>
+          </div>
+          <div class="game-card-footer">
+            <span class="game-status coming-soon">Someday...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="section-inner">
+      <h2 class="section-title reveal">Stay in the Loop</h2>
+      <p class="reveal">Follow our devlog for development updates, screenshots, and behind-the-scenes content.</p>
+      <div class="hero-cta reveal">
+        <a href="devlog.html" class="btn-primary">Read Devlog</a>
+        <a href="about.html" class="btn-secondary">About Us</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">🕯️ Grave Lantern Studio</div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="devlog.html">Devlog</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <p class="footer-copy">© 2026 Grave Lantern Studio. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 100);
+        }
+      });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
