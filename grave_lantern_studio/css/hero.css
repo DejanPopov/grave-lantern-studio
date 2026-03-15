@@ -1,0 +1,293 @@
+/* ── Hero ── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+}
+
+.hero img.hero-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 20% 50%;
+  display: block;
+}
+
+/* ── Hero Logo Overlay ── */
+.hero-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 7%; /* ← adjust this to move logo up or down */
+  width: clamp(320px, 50vw, 1100px);
+  z-index: 4;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ── Particles ── */
+.hero-particles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.particle {
+  position: absolute;
+  width: 2px; height: 2px;
+  background: var(--green-glow);
+  border-radius: 50%;
+  box-shadow: 0 0 6px var(--green-glow);
+  animation: float-particle linear infinite;
+  opacity: 0;
+}
+
+.particle:nth-child(1)  { left: 5%;  animation-duration: 8s;  animation-delay: 0s;   top: 80%; }
+.particle:nth-child(2)  { left: 12%; animation-duration: 12s; animation-delay: 2s;   top: 90%; }
+.particle:nth-child(3)  { left: 20%; animation-duration: 9s;  animation-delay: 4s;   top: 85%; }
+.particle:nth-child(4)  { left: 28%; animation-duration: 11s; animation-delay: 1s;   top: 88%; }
+.particle:nth-child(5)  { left: 35%; animation-duration: 7s;  animation-delay: 3s;   top: 92%; }
+.particle:nth-child(6)  { left: 42%; animation-duration: 10s; animation-delay: 5s;   top: 78%; }
+.particle:nth-child(7)  { left: 50%; animation-duration: 13s; animation-delay: 6s;   top: 95%; }
+.particle:nth-child(8)  { left: 57%; animation-duration: 8s;  animation-delay: 7s;   top: 82%; }
+.particle:nth-child(9)  { left: 64%; animation-duration: 14s; animation-delay: 2s;   top: 87%; }
+.particle:nth-child(10) { left: 71%; animation-duration: 9s;  animation-delay: 4s;   top: 93%; }
+.particle:nth-child(11) { left: 78%; animation-duration: 11s; animation-delay: 0s;   top: 84%; }
+.particle:nth-child(12) { left: 85%; animation-duration: 7s;  animation-delay: 3s;   top: 89%; }
+.particle:nth-child(13) { left: 92%; animation-duration: 10s; animation-delay: 5s;   top: 91%; }
+.particle:nth-child(14) { left: 8%;  animation-duration: 12s; animation-delay: 1s;   top: 86%; }
+.particle:nth-child(15) { left: 22%; animation-duration: 8s;  animation-delay: 6s;   top: 94%; }
+.particle:nth-child(16) { left: 45%; animation-duration: 9s;  animation-delay: 2s;   top: 79%; }
+.particle:nth-child(17) { left: 60%; animation-duration: 15s; animation-delay: 4s;   top: 96%; }
+.particle:nth-child(18) { left: 73%; animation-duration: 11s; animation-delay: 7s;   top: 83%; }
+.particle:nth-child(19) { left: 88%; animation-duration: 8s;  animation-delay: 3s;   top: 90%; }
+.particle:nth-child(20) { left: 95%; animation-duration: 13s; animation-delay: 1s;   top: 87%; }
+
+/* ── Scroll Indicator ── */
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem; left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 3;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.3em;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.scroll-arrow {
+  width: 1px; height: 40px;
+  background: linear-gradient(180deg, rgba(0,255,136,0.6), transparent);
+  animation: scroll-pulse 2s ease infinite;
+}
+
+/* ══════════════════════════════════════
+   LANTERN MAGICAL AURA EFFECT
+══════════════════════════════════════ */
+.lantern-fire {
+  position: absolute;
+  left: 50%;  /* adjust in fire.js */
+  top: 40%;   /* adjust in fire.js */
+  transform: translate(-50%, -50%);
+  width: 120px; height: 120px;
+  z-index: 3;
+  pointer-events: none;
+  animation: light-flicker 4s ease infinite; /* ← add this */
+}
+
+/* Hide unused flame elements */
+.flame-1, .flame-2, .flame-3, .flame-4 { display: none; }
+
+/* Pulsing core glow — sits over lantern glass */
+.fire-glow {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px; height: 80px;
+  background: radial-gradient(circle,
+    rgba(0,255,136,0.5) 0%,
+    rgba(0,255,136,0.2) 40%,
+    transparent 70%);
+  border-radius: 50%;
+  filter: blur(8px);
+  animation: lantern-breathe 2.5s ease infinite;
+}
+
+/* Outer soft glow halo */
+.fire-glow::after {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 160px; height: 160px;
+  background: radial-gradient(circle,
+    rgba(0,255,136,0.12) 0%,
+    transparent 70%);
+  border-radius: 50%;
+  filter: blur(12px);
+  animation: lantern-breathe 2.5s ease infinite reverse;
+}
+
+/* Swirling magical orbs */
+.swirl-orb {
+  position: absolute;
+  top: 50%; left: 50%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,255,136,0.95) 0%, rgba(0,255,136,0) 70%);
+  filter: blur(1px);
+  box-shadow: 0 0 6px rgba(0,255,136,0.8);
+}
+.swirl-orb-1 { width: 7px; height: 7px; margin: -3.5px; animation: orbit-1 3s linear infinite; }
+.swirl-orb-2 { width: 5px; height: 5px; margin: -2.5px; animation: orbit-2 2s linear infinite; opacity: 0.8; }
+.swirl-orb-3 { width: 6px; height: 6px; margin: -3px;   animation: orbit-3 4s linear infinite; opacity: 0.6; }
+
+/* Flying magical sparkles */
+.ember {
+  position: absolute;
+  width: 3px; height: 3px;
+  background: #00ff88;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #00ff88, 0 0 12px rgba(0,255,136,0.6);
+  animation: magic-sparkle linear infinite;
+  top: 50%; left: 50%;
+}
+.ember:nth-child(1) { animation-duration: 2s;   animation-delay: 0s;   width: 4px; height: 4px; }
+.ember:nth-child(2) { animation-duration: 2.8s; animation-delay: 0.5s; }
+.ember:nth-child(3) { animation-duration: 1.8s; animation-delay: 1s;   width: 2px; height: 2px; }
+.ember:nth-child(4) { animation-duration: 2.4s; animation-delay: 1.5s; }
+.ember:nth-child(5) { animation-duration: 3.2s; animation-delay: 0.3s; width: 4px; height: 4px; }
+
+/* Expanding magic rings from center */
+.magic-ring {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) scale(0.3);
+  border-radius: 50%;
+  border: 1px solid rgba(0,255,136,0.5);
+  box-shadow: 0 0 10px rgba(0,255,136,0.3), inset 0 0 10px rgba(0,255,136,0.1);
+}
+.magic-ring-1 { width: 100px; height: 100px; animation: ring-expand-center 3s ease infinite; }
+.magic-ring-2 { width: 100px; height: 100px; animation: ring-expand-center 3s ease infinite 1s; }
+.magic-ring-3 { width: 100px; height: 100px; animation: ring-expand-center 3s ease infinite 2s; }
+
+/* ══════════════════════════════════════
+   ENHANCED LANTERN EFFECTS
+══════════════════════════════════════ */
+
+/* Light cone casting downward */
+.light-cone {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translateX(-50%);
+  width: 0; height: 0;
+  border-left: 70px solid transparent;
+  border-right: 70px solid transparent;
+  border-top: 200px solid rgba(0,255,136,0.05);
+  filter: blur(15px);
+  animation: light-flicker 3s ease infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Smoke wisps rising */
+.smoke-container {
+  position: absolute;
+  top: 30%; left: 50%;
+  transform: translateX(-50%);
+  width: 60px; height: 80px;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.wisp {
+  position: absolute;
+  bottom: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,255,136,0.12) 0%, transparent 70%);
+  filter: blur(5px);
+  animation: wisp-rise linear infinite;
+}
+.wisp-1 { width: 20px; height: 25px; left: 40%; animation-duration: 4s;   animation-delay: 0s; }
+.wisp-2 { width: 15px; height: 20px; left: 55%; animation-duration: 5s;   animation-delay: 1.5s; }
+.wisp-3 { width: 18px; height: 22px; left: 45%; animation-duration: 3.5s; animation-delay: 0.8s; }
+.wisp-4 { width: 12px; height: 16px; left: 60%; animation-duration: 4.5s; animation-delay: 2.2s; }
+
+/* Creature eye glow */
+.creature-eyes {
+  position: absolute;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.eye {
+  position: absolute;
+  width: 8px; height: 5px;
+  background: radial-gradient(ellipse, rgba(0,255,136,0.95) 0%, rgba(0,255,136,0.4) 60%, transparent 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0,255,136,0.9), 0 0 20px rgba(0,255,136,0.4);
+  animation: eye-blink 5s ease infinite;
+}
+.eye-left  { left: 0;    top: 0; animation-delay: 0s; }
+.eye-right { left: 16px; top: 0; animation-delay: 0.1s; }
+
+/* Chain shimmer */
+.chain-shimmer {
+  position: absolute;
+  width: 3px;
+  background: linear-gradient(180deg,
+    transparent 0%,
+    rgba(0,255,136,0.5) 40%,
+    rgba(0,255,136,0.9) 50%,
+    rgba(0,255,136,0.5) 60%,
+    transparent 100%);
+  border-radius: 2px;
+  filter: blur(1px);
+  animation: chain-pulse linear infinite;
+  pointer-events: none;
+  z-index: 4;
+  opacity: 0;
+}
+.chain-left  { height: 80px; animation-duration: 2.5s; animation-delay: 0s; }
+.chain-right { height: 80px; animation-duration: 2.5s; animation-delay: 1.2s; }
+
+/* ── Page Header (inner pages) ── */
+.page-header {
+  min-height: 40vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 8rem 2rem 4rem;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(123,45,139,0.2) 0%, transparent 70%),
+    var(--bg-void);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.page-header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.page-header-title {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(2rem, 6vw, 5rem);
+  font-weight: 900;
+  color: var(--text-bright);
+  line-height: 1.1;
+}

@@ -4,14 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About — Grave Lantern Studio</title>
-  <meta name="description" content="The story behind Grave Lantern Studio.">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
 
   <nav>
     <a href="index.html" class="nav-logo">
-      <span class="lantern-icon">🕯️</span>
+      <img src="images/GraveLanternLogo.png" alt="Grave Lantern Studio">
       Grave Lantern Studio
     </a>
     <ul class="nav-links">
@@ -29,29 +33,19 @@
     </div>
   </div>
 
-  <!-- STORY SECTION -->
-  <section style="padding: 5rem 2rem; background: var(--bg-surface);">
+  <!-- STORY -->
+  <section style="padding:5rem 2rem;background:var(--bg-surface);">
     <div class="section-inner">
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;">
         <div class="reveal">
           <div class="section-label">Origin Story</div>
           <h2 class="section-title">Why We Exist</h2>
-          <p style="color:var(--text-mid); margin-bottom:1.5rem; font-size:1.1rem;">
-            Grave Lantern Studio was born from a simple but stubborn belief: that small, 
-            passionate teams can create games that resonate deeply — games that linger in 
-            your memory long after the credits roll.
-          </p>
-          <p style="color:var(--text-mid); margin-bottom:1.5rem; font-size:1.1rem;">
-            We were tired of games that prioritized spectacle over substance. We wanted to 
-            build experiences built on atmosphere, storytelling, and emotion. So we did.
-          </p>
-          <p style="color:var(--text-dim); font-style:italic; font-size:1rem;">
-            "The best horror isn't what you see. It's what you imagine."
-          </p>
+          <p style="color:var(--text-mid);margin-bottom:1.5rem;font-size:1.1rem;">Grave Lantern Studio was born from a simple but stubborn belief: that small, passionate teams can create games that resonate deeply — games that linger in your memory long after the credits roll.</p>
+          <p style="color:var(--text-mid);margin-bottom:1.5rem;font-size:1.1rem;">We were tired of games that prioritized spectacle over substance. We wanted to build experiences built on atmosphere, storytelling, and emotion. So we did.</p>
+          <p style="color:var(--text-dim);font-style:italic;">"The best horror isn't what you see. It's what you imagine."</p>
         </div>
         <div class="about-image-wrapper reveal">
-          <img src="images/Kum 1 25.jpg" alt="Grave Lantern Studio" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-          <div style="display:none; width:100%; height:400px; background:linear-gradient(135deg,#1a0a2e,#0a1628,#004d2a); align-items:center; justify-content:center; font-size:6rem;">🕯️</div>
+          <img src="images/GraveLanternWallpaper.jpg" alt="Grave Lantern Studio">
         </div>
       </div>
     </div>
@@ -60,43 +54,17 @@
   <div class="divider"></div>
 
   <!-- VALUES -->
-  <section style="padding: 5rem 2rem; background: var(--bg-deep);">
+  <section style="padding:5rem 2rem;background:var(--bg-deep);">
     <div class="section-inner">
       <div class="section-label reveal">What We Stand For</div>
       <h2 class="section-title reveal">Our Values</h2>
-      <p class="section-desc reveal">These aren't just words on a page. They're the principles that guide every decision we make.</p>
-
       <div class="values-grid">
-        <div class="value-card reveal">
-          <div class="value-icon">🕯️</div>
-          <h3 class="value-title">Atmosphere First</h3>
-          <p class="value-desc">Every element — art, sound, design — serves the atmosphere. If it doesn't contribute to the feeling, it doesn't belong.</p>
-        </div>
-        <div class="value-card reveal">
-          <div class="value-icon">❤️</div>
-          <h3 class="value-title">Made with Care</h3>
-          <p class="value-desc">We don't ship half-baked products. Every release is something we're genuinely proud of, crafted with patience and attention to detail.</p>
-        </div>
-        <div class="value-card reveal">
-          <div class="value-icon">🌱</div>
-          <h3 class="value-title">Always Learning</h3>
-          <p class="value-desc">We're never done growing. Every project teaches us something new, and we carry those lessons forward.</p>
-        </div>
-        <div class="value-card reveal">
-          <div class="value-icon">🤝</div>
-          <h3 class="value-title">Community Driven</h3>
-          <p class="value-desc">Our players aren't just customers — they're collaborators. Their feedback shapes our games in meaningful ways.</p>
-        </div>
-        <div class="value-card reveal">
-          <div class="value-icon">🔓</div>
-          <h3 class="value-title">Transparency</h3>
-          <p class="value-desc">We document our journey openly — the wins and the struggles. No smoke and mirrors. Just honest game development.</p>
-        </div>
-        <div class="value-card reveal">
-          <div class="value-icon">🎮</div>
-          <h3 class="value-title">Fun is Non-Negotiable</h3>
-          <p class="value-desc">At the end of the day, games should be fun to make AND to play. If we're not enjoying the process, something's wrong.</p>
-        </div>
+        <div class="value-card reveal"><div class="value-icon">🕯️</div><h3 class="value-title">Atmosphere First</h3><p class="value-desc">Every element serves the atmosphere. If it doesn't contribute to the feeling, it doesn't belong.</p></div>
+        <div class="value-card reveal"><div class="value-icon">❤️</div><h3 class="value-title">Made with Care</h3><p class="value-desc">We don't ship half-baked products. Every release is something we're genuinely proud of.</p></div>
+        <div class="value-card reveal"><div class="value-icon">🌱</div><h3 class="value-title">Always Learning</h3><p class="value-desc">We're never done growing. Every project teaches us something new.</p></div>
+        <div class="value-card reveal"><div class="value-icon">🤝</div><h3 class="value-title">Community Driven</h3><p class="value-desc">Our players aren't just customers — they're collaborators.</p></div>
+        <div class="value-card reveal"><div class="value-icon">🔓</div><h3 class="value-title">Transparency</h3><p class="value-desc">We document our journey openly — the wins and the struggles.</p></div>
+        <div class="value-card reveal"><div class="value-icon">🎮</div><h3 class="value-title">Fun is Non-Negotiable</h3><p class="value-desc">If we're not enjoying the process, something's wrong.</p></div>
       </div>
     </div>
   </section>
@@ -104,64 +72,45 @@
   <div class="divider"></div>
 
   <!-- TEAM -->
-  <section style="padding: 5rem 2rem;">
+  <section style="padding:5rem 2rem;">
     <div class="section-inner">
       <div class="section-label reveal">The People</div>
       <h2 class="section-title reveal">Meet the Team</h2>
-      <p class="section-desc reveal">Small but mighty. Every person here wears multiple hats and brings something irreplaceable to the table.</p>
-
+      <p class="section-desc reveal">Small but mighty. Every person here wears multiple hats.</p>
       <div class="team-grid">
         <div class="team-card reveal">
           <div class="team-avatar">🔨</div>
           <h3 class="team-name">Pixel the Hammer</h3>
           <p class="team-role">Founder & Lead Developer</p>
-          <p class="team-bio">
-            The driving force behind Grave Lantern Studio. DevOps engineer by day, 
-            indie game developer by passion. Believes that good tools make great games.
-          </p>
+          <p class="team-bio">The driving force behind Grave Lantern Studio. DevOps engineer by day, indie game developer by passion.</p>
         </div>
-
         <div class="team-card reveal">
           <div class="team-avatar">🎨</div>
           <h3 class="team-name">Your Name Here</h3>
           <p class="team-role">Artist & Designer</p>
-          <p class="team-bio">
-            The visual soul of the studio. Responsible for the atmospheric art style 
-            that makes Grave Lantern games instantly recognizable.
-          </p>
+          <p class="team-bio">The visual soul of the studio. Responsible for the atmospheric art style that makes Grave Lantern games instantly recognizable.</p>
         </div>
-
         <div class="team-card reveal">
           <div class="team-avatar">🎵</div>
           <h3 class="team-name">Your Name Here</h3>
           <p class="team-role">Sound & Music</p>
-          <p class="team-bio">
-            Creates the haunting soundscapes and original scores that bring our worlds 
-            to life. If the art sets the scene, the sound makes you feel it.
-          </p>
+          <p class="team-bio">Creates the haunting soundscapes and original scores that bring our worlds to life.</p>
         </div>
       </div>
-
-      <p style="text-align:center; color:var(--text-dim); font-family:'Space Mono',monospace; font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; margin-top:3rem;" class="reveal">
-        Want to join us? Reach out — we're always open to collaborations.
-      </p>
     </div>
   </section>
 
   <div class="divider"></div>
 
   <!-- CONTACT -->
-  <section style="padding: 5rem 2rem; background:var(--bg-surface);">
-    <div class="section-inner" style="text-align:center;">
+  <section style="padding:5rem 2rem;background:var(--bg-surface);text-align:center;">
+    <div class="section-inner">
       <div class="section-label reveal" style="justify-content:center;">Get in Touch</div>
       <h2 class="section-title reveal">Say Hello</h2>
-      <p style="color:var(--text-mid); max-width:500px; margin:0 auto 3rem;" class="reveal">
-        Whether you're a player, a fellow developer, or a potential collaborator — 
-        we'd love to hear from you.
-      </p>
+      <p style="color:var(--text-mid);max-width:500px;margin:0 auto 3rem;" class="reveal">Whether you're a player, a fellow developer, or a potential collaborator — we'd love to hear from you.</p>
       <div class="hero-cta reveal">
-        <a href="https://bsky.app/profile/pixelthehammer.bsky.social" target="_blank" class="btn-primary">Find us on Bluesky</a>
-        <a href="https://t.me/GraveLanternStudio" target="_blank" class="btn-secondary">Telegram Channel</a>
+        <a href="https://bsky.app/profile/pixelthehammer.bsky.social" target="_blank" class="btn-primary">Bluesky</a>
+        <a href="https://t.me/GraveLanternStudio" target="_blank" class="btn-secondary">Telegram</a>
         <a href="https://mastodon.social/@PixelTheHammer" target="_blank" class="btn-secondary">Mastodon</a>
       </div>
     </div>
@@ -169,7 +118,7 @@
 
   <footer>
     <div class="footer-inner">
-      <div class="footer-logo">🕯️ Grave Lantern Studio</div>
+      <div class="footer-logo"><img src="images/GraveLanternLogo.png" alt="">Grave Lantern Studio</div>
       <ul class="footer-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="games.html">Games</a></li>
@@ -180,17 +129,6 @@
     </div>
   </footer>
 
-  <script>
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry, i) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => entry.target.classList.add('visible'), i * 100);
-        }
-      });
-    }, { threshold: 0.1 });
-    reveals.forEach(el => observer.observe(el));
-  </script>
-
+  <script src="js/reveal.js"></script>
 </body>
 </html>
