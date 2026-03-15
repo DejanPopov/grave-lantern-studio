@@ -31,11 +31,14 @@
   .hero {
     background: var(--bg-void);
   }
+  .hero-logo {
+    top: 14%;
+  }
   .hero-mobile-icon {
     display: block;
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 57%;
     transform: translate(-50%, -50%);
     width: clamp(200px, 60vw, 350px);
     z-index: 4;
@@ -51,7 +54,7 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 7%; /* ← adjust this to move logo up or down */
+  top: 12%; /* ← adjust this to move logo up or down */
   width: clamp(320px, 50vw, 1100px);
   z-index: 4;
   pointer-events: none;
