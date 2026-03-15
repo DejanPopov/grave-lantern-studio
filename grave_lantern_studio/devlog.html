@@ -47,7 +47,10 @@
               <h2 class="devlog-post-title">New Game is Officially in the Making!</h2>
               <p class="devlog-post-excerpt">We're incredibly excited to share that Grave Lantern Studio has officially kicked off development on our next title! The whiteboards are covered in ideas, the coffee pot is perpetually full, and the team is buzzing with creative energy.</p>
               <p class="devlog-post-excerpt">It's always a wild, slightly terrifying feeling — staring at a blank canvas and knowing you're about to fill it with something that didn't exist before. We're documenting everything as we go. Follow along!</p>
-              <a href="#" class="btn-secondary" style="font-size:0.6rem;padding:0.6rem 1.5rem;">Read Full Post</a>
+              <div class="devlog-post-full">
+                <p class="devlog-post-excerpt">Full post content coming soon. Check back when we've had more coffee and fewer existential crises about the game's name.</p>
+              </div>
+              <button class="btn-secondary devlog-expand-btn" style="font-size:0.6rem;padding:0.6rem 1.5rem;">Read Full Post</button>
             </div>
           </div>
 
@@ -59,7 +62,10 @@
             <div class="devlog-post-body">
               <h2 class="devlog-post-title">Setting Up Our Development Pipeline</h2>
               <p class="devlog-post-excerpt">Before you can build a game, you need to build the foundation. This week we spent time setting up version control, automated builds, and our internal project management system.</p>
-              <a href="#" class="btn-secondary" style="font-size:0.6rem;padding:0.6rem 1.5rem;">Read Full Post</a>
+              <div class="devlog-post-full">
+                <p class="devlog-post-excerpt">Full post content coming soon. We'll go into detail about the tools we chose and why they work for a small indie team.</p>
+              </div>
+              <button class="btn-secondary devlog-expand-btn" style="font-size:0.6rem;padding:0.6rem 1.5rem;">Read Full Post</button>
             </div>
           </div>
 
@@ -71,7 +77,10 @@
             <div class="devlog-post-body">
               <h2 class="devlog-post-title">Choosing Our Tech Stack</h2>
               <p class="devlog-post-excerpt">One of the most important decisions in indie game development: which engine to use. We went through our considerations, weighed the pros and cons, and landed on a choice we're genuinely excited about.</p>
-              <a href="#" class="btn-secondary" style="font-size:0.6rem;padding:0.6rem 1.5rem;">Read Full Post</a>
+              <div class="devlog-post-full">
+                <p class="devlog-post-excerpt">Full post content coming soon. Spoiler: it took way longer to decide than we'd like to admit.</p>
+              </div>
+              <button class="btn-secondary devlog-expand-btn" style="font-size:0.6rem;padding:0.6rem 1.5rem;">Read Full Post</button>
             </div>
           </div>
 
@@ -83,7 +92,10 @@
             <div class="devlog-post-body">
               <h2 class="devlog-post-title">The Story Behind Grave Lantern Studio</h2>
               <p class="devlog-post-excerpt">Every studio has an origin story. Ours started with a conversation, a shared love of atmospheric games, and a stubborn belief that small teams can make games that punch way above their weight.</p>
-              <a href="#" class="btn-secondary" style="font-size:0.6rem;padding:0.6rem 1.5rem;">Read Full Post</a>
+              <div class="devlog-post-full">
+                <p class="devlog-post-excerpt">Full post content coming soon. The full origin story is worth telling properly — we'll get to it.</p>
+              </div>
+              <button class="btn-secondary devlog-expand-btn" style="font-size:0.6rem;padding:0.6rem 1.5rem;">Read Full Post</button>
             </div>
           </div>
         </div>
@@ -92,9 +104,11 @@
           <div class="sidebar-widget reveal">
             <h3 class="sidebar-widget-title">Follow Along</h3>
             <div style="display:flex;flex-direction:column;gap:0.8rem;">
-              <a href="https://bsky.app/profile/pixelthehammer.bsky.social" target="_blank" class="btn-primary" style="text-align:center;font-size:0.6rem;">🦋 Bluesky</a>
-              <a href="https://mastodon.social/@PixelTheHammer" target="_blank" class="btn-secondary" style="text-align:center;font-size:0.6rem;">🐘 Mastodon</a>
-              <a href="https://t.me/GraveLanternStudio" target="_blank" class="btn-secondary" style="text-align:center;font-size:0.6rem;">✈️ Telegram</a>
+              <a href="https://bsky.app/profile/pixelthehammer.bsky.social" target="_blank" class="btn-primary" style="text-align:center;font-size:0.6rem;">Bluesky — Dejan</a>
+              <a href="https://bsky.app/profile/oomkin.bsky.social" target="_blank" class="btn-primary" style="text-align:center;font-size:0.6rem;">Bluesky — Milica</a>
+              <a href="https://mastodon.social/@PixelTheHammer" target="_blank" class="btn-secondary" style="text-align:center;font-size:0.6rem;">Mastodon</a>
+              <a href="https://discord.gg/rfPKNT84" target="_blank" class="btn-secondary" style="text-align:center;font-size:0.6rem;">Discord</a>
+              <a href="https://t.me/GraveLanternStudio" target="_blank" class="btn-secondary" style="text-align:center;font-size:0.6rem;">Telegram</a>
             </div>
           </div>
 
@@ -166,5 +180,14 @@
   </footer>
 
   <script src="js/reveal.js"></script>
+  <script>
+    document.querySelectorAll('.devlog-expand-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const full = btn.previousElementSibling;
+        const isOpen = full.classList.toggle('open');
+        btn.textContent = isOpen ? 'Collapse' : 'Read Full Post';
+      });
+    });
+  </script>
 </body>
 </html>

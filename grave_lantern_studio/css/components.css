@@ -221,6 +221,23 @@
 .devlog-post-title { font-family: 'Cinzel Decorative', serif; font-size: 1.3rem; color: var(--text-bright); margin-bottom: 0.8rem; line-height: 1.3; }
 .devlog-post-excerpt { color: var(--text-mid); font-size: 1.2rem; margin-bottom: 1.5rem; }
 
+/* ── Devlog Expand ── */
+.devlog-post-full {
+  display: none;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-subtle);
+}
+.devlog-post-full.open {
+  display: block;
+}
+.devlog-expand-btn {
+  cursor: pointer;
+  margin-top: 1rem;
+  background: none;
+  border: 1px solid rgba(0,255,136,0.4);
+}
+
 /* ── Sidebar ── */
 .devlog-sidebar { display: flex; flex-direction: column; gap: 2rem; }
 .sidebar-widget { background: var(--bg-surface); border: 1px solid var(--border-subtle); padding: 1.5rem; }

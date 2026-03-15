@@ -19,6 +19,33 @@
   display: block;
 }
 
+/* ── Mobile hero icon (hidden on desktop) ── */
+.hero-mobile-icon {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hero img.hero-bg-img {
+    display: none;
+  }
+  .hero {
+    background: var(--bg-void);
+  }
+  .hero-mobile-icon {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: clamp(200px, 60vw, 350px);
+    z-index: 4;
+    pointer-events: none;
+  }
+  .lantern-fire {
+    display: none;
+  }
+}
+
 /* ── Hero Logo Overlay ── */
 .hero-logo {
   position: absolute;
